@@ -1,0 +1,85 @@
+@import "./variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #D9FFF5;
+
+  @media(min-width: $desktop) {
+    display: none;
+  }
+
+  &__part-left {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    padding: 18px 0;
+  }
+
+  &__part-right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media(min-width: $tablet) {
+      margin-right: 20px;
+    }
+  }
+
+  &__button-menu::before {
+    content: '';
+    width: 18px;
+    height: 2px;
+    height: 2px;
+    background-color: #fff;
+    box-shadow: 0px -7px 0px 0px #fff,
+                0px 7px 0px 0px #fff;
+    border-radius: 5px;
+  }
+
+  &__menu-line:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  &__logo {
+    margin-left: 16px;
+
+    @media(min-width: $tablet) {
+      order: 1;
+    }
+  }
+
+  &__separator {
+    width: 2px;
+    height: 32px;
+    background: #EAEAEA;
+
+    @media(min-width: $tablet) {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+
+  &__separator--left {
+    margin-left: 16px;
+
+    @media(min-width: $tablet) {
+      margin-right: 0;
+    }
+  }
+
+  &__separator--right {
+    display: none;
+
+    @media(min-width: $tablet) {
+      margin-left: 20px;
+      display: block;
+    }
+  }
+}

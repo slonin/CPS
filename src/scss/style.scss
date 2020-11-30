@@ -1,0 +1,252 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/swiper/swiper-bundle.min.css";
+@import "./fonts.scss";
+@import "./variables";
+@import "./forms";
+@import "./mobile-menu.scss";
+@import "./header.scss";
+@import "./about-section.scss";
+@import "./brands-section.scss";
+@import "./services-section.scss";
+@import "./price-section.scss";
+@import "./footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+body {
+  min-width: 320px;
+  background-color: #F8F8F8;
+  font-family: 'TTLakes-Regular';
+  max-width: 1426px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0px 16px;
+
+  @media(min-width: 575px) {
+    padding: 0px 25px;
+  }
+
+  @media(min-width: 1120px) {
+    padding: 0 32px;
+  }
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  background-color: $pink;
+  border:none;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  transition: opacity .3s;
+
+  &--call {
+    background-image: url('../img/icon-call.svg');
+    margin-right: 16px;
+  }
+  
+  &--chat {
+    background-image: url('../img/icon-chat.svg');
+    margin-right: 16px;
+  }
+  
+  &--profile {
+    background-image: url('../img/icon-profile.svg');
+  }
+  
+  &--repair {
+    background-image: url('../img/icon-repair.svg');
+    margin-right: 16px;
+  }
+  
+  &--status {
+    background-image: url('../img/icon-check.svg');
+  }
+
+  &--repair,
+  &--status {
+
+    @media(min-width: $desktop) {
+      border-radius: 0;
+      font-family: 'TTLakes-Medium';
+      width: 200px;
+      background-color: transparent;
+      background-position: right center;
+      font-size: 16px;
+      line-height: 24px;
+      padding-right: 40px;  
+    }
+  }
+
+  &--close {
+    background-image: url('../img/icon-close.svg');
+  }
+  
+  &--search {
+    background-image: url('../img/icon-search.svg');
+    margin-left: auto;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.buttons-left {
+  display: flex;
+  align-items: center;
+  display: none;
+
+  @media(min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.buttons-right {
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  padding-top: 24px;
+
+  @media(min-width: $desktop) {
+    display: flex;
+    padding-top: 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media(min-width: $desktop) {
+      padding-top: 42px;
+    }
+  }
+  
+  &__title {
+    position: relative;
+    font-size: 28px;
+    font-family: 'TTLakes-Bold';
+    line-height: 40px;
+    color: $text;
+    margin: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 40px;
+      top: 0;
+      margin-left: -16px;
+      background-color: $cyan;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+  
+      @media(min-width: 575px) {
+        margin-left: -25px;
+      }
+  
+      @media(min-width: 1120px) {
+        margin-left: -32px;
+      }
+    }
+  }
+  
+  &__buttons {
+    display: none;
+
+    @media(min-width: $desktop) {
+      display: block;
+    }
+  }
+}
+
+.menu {
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    @media(min-width: $desktop) {
+      flex-wrap: wrap;
+    }
+  }
+  
+  &__item {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__item:not(:last-child) {
+    margin-right: 20px;
+
+    @media(min-width: 1120px) {
+      margin: 0;
+    }
+  }
+  
+  &__link {
+    line-height: 24px;
+    display: inline-block;
+    text-decoration: none;
+    color: #7E7E82;
+    padding: 8px 16px;
+  }
+  
+  &__link--active {
+    background-color: white;
+    box-shadow:inset 0 0 0 2px #B8FFEC;
+    border-radius: 2px;
+  }
+}
+
+
+
+.section-title {
+  padding: 16px;
+  background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #7E7E82;
+  text-transform: uppercase;
+  border-top: 1px solid #D9FFF5;
+
+  @media(min-width: 575px) {
+    padding: 16px 24px;
+  }
+
+  @media(min-width: 1120px) {
+    padding: 16px 32px;
+  }
+}
+
+.content {
+  @media(min-width: $desktop) {
+    width: 1120px;
+  }
+}

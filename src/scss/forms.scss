@@ -1,0 +1,76 @@
+@import "./variables";
+
+.form {
+  display: none;
+  width: 320px;
+  padding: 40px 32px;
+  flex-direction: column;
+  background: #FFFFFF;
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  top: 0;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 
+              16px 0px 52px rgba(14, 24, 80, 0.2);
+
+  @media(min-width: 1120px) {
+    width: 440px;
+    height: 100vh;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-family: 'TTLakes-Bold';
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: $text;
+  }
+
+  &__input {
+    font-family: 'TTLakes-Medium';
+    padding: 12px 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #B5B6BC;
+    margin-bottom: 16px;
+    resize: none;
+  }
+
+  &__text {
+    font-family: 'TTLakes-Medium';
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+    margin-bottom: 19px;
+  }
+
+  &__link {
+    color: $pink;
+  }
+}
+
+.form-call {
+  height: 100vh;
+}
+
+.form-feedback,
+.form-call {
+
+  &__button {
+    margin-bottom: 40px;
+    
+    @media(min-width: $desktop){
+      position: absolute;
+      top: 32px;
+      left: -72px;
+    }
+  }
+
+
+  &--opened {
+    display: flex;
+  }
+}

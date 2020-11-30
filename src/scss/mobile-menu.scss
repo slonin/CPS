@@ -1,0 +1,152 @@
+@import './variables';
+
+
+.blur {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #fff, $alpha: 0.96);
+  z-index: 5;
+  transition: all 0.7s;
+
+  &--visible {
+    display: block;
+  }
+}
+
+
+.mobile-menu {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: -400px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 100vh;
+  padding: 18px 24px;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+  overflow-y: auto;
+  background-color: #fff;
+  transition: all .7s;
+  z-index: 10;
+
+  @media(min-width: $desktop) {
+    display: block;
+    position: static;
+    visibility: visible;
+    box-shadow: none;
+    height: auto;
+    z-index: 1;
+  }
+
+  &--opened {
+    visibility: visible;
+    top:0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  &__header {
+    margin-bottom: 46px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    @media(min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    margin-left: 16px;
+
+    @media(min-width: $desktop) {
+      margin: 0;
+    }
+  }
+
+  &__buttons {
+    margin-top: auto;
+    margin-bottom: 16px;
+  }
+}
+  
+.navigation {
+
+  &__list {
+    list-style: none;
+  }
+  
+  &__item {
+    margin-bottom: 32px;
+  }
+  
+  &__link {
+    text-decoration: none;
+    color: $text;
+    font-family: 'TTLakes-Medium';
+  }
+  
+  &__link--active {
+    position: relative;
+    color: #7E7E82;
+  }
+  
+  &__link--active::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 32px;
+    top: -6px;
+    margin-left: -24px;
+    background-color: $cyan;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+  
+  
+.contacts {
+
+  &__mail {
+    font-family: 'TTLakes-Medium';
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: $text;
+    display: block;
+    margin-bottom: 12px;
+  }
+  
+  &__phone {
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 32px;
+    color: $text;
+    display: block;
+    font-family: 'TTLakes-Bold';
+    margin-bottom: 40px;
+  }
+}
+
+.language {
+
+  &__button {
+    font-family: 'TTLakes-Medium';
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin-right: 7px;
+    color: $text;
+    font-size: 16px;
+  }
+  
+  &__button--active {
+    color: #7E7E82;
+  }
+}
