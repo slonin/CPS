@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -27,7 +27,7 @@
 		</div>
 	</header>
 	<main class="main">
-			<div class="blur"></div>
+		<div class="menu-wrapper">
 			<div class="mobile-menu">
 				<div class="mobile-menu__header">
 					<button class="button button--close mobile-menu__button"></button>
@@ -61,23 +61,28 @@
 					<button type="button" class="language__button">CH</button>
 				</div>
 			</div>				
-		<form class="form form-feedback">
-			<button type="button" class="button button--close form-feedback__button"></button>
-			<h2 class="form__title">Обратная связь</h2>
-			<input type="text" class="form__input" placeholder="Имя">
-			<input type="tel" class="form__input" placeholder="Телефон">
-			<input type="email" class="form__input" placeholder="Электронная почта">
-			<textarea class="form__input" name="" id="" rows="4"  placeholder="Сообщение"></textarea>
-			<p class="form__text">Нажимая “отправить”, вы даете согласие на <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
-			<button type="submit" class="form-feedback__button-submit price__button">ОТПРАВИТЬ</button>
-		</form>
-		<form class="form form-call">
-			<button type="button" class="button button--close form-call__button"></button>
-			<h2 class="form__title">Заказать звонок</h2>
-			<input type="tel" class="form__input" placeholder="Телефон">
-			<p class="form__text">Нажимая “отправить”, вы даете согласие на <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
-			<button type="submit" class="form-call__button-submit price__button">ОТПРАВИТЬ</button>
-		</form>
+		</div>
+		<div class="form-wrapper" data-form="feedback">
+			<form class="form form-feedback">
+				<button type="button" class="button button--close form-feedback__button"></button>
+				<h2 class="form__title">Обратная связь</h2>
+				<input type="text" class="form__input" placeholder="Имя">
+				<input type="tel" class="form__input" placeholder="Телефон">
+				<input type="email" class="form__input" placeholder="Электронная почта">
+				<textarea class="form__input" name="" id="" rows="4"  placeholder="Сообщение"></textarea>
+				<p class="form__text">Нажимая “отправить”, вы даете согласие на <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
+				<button type="submit" class="form-feedback__button-submit button-pink">ОТПРАВИТЬ</button>
+			</form>
+		</div>
+		<div class="form-wrapper" data-form="call">
+			<form class="form form-call">
+				<button type="button" class="button button--close form-call__button"></button>
+				<h2 class="form__title">Заказать звонок</h2>
+				<input type="tel" class="form__input" placeholder="Телефон">
+				<p class="form__text">Нажимая “отправить”, вы даете согласие на <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
+				<button type="submit" class="form-call__button-submit button-pink">ОТПРАВИТЬ</button>
+			</form>
+		</div>
 		<div class="content">
 			<div class="container">
 				<div class="main__header">
@@ -103,7 +108,7 @@
 					<p class="about__text ">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. </p>
 					<p class="about__text about__text--hide">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
 					<p class="about__text about__text--hide">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-					<button type="button" class="about__button">Читать далее</button>
+					<button type="button" class="button-unfold about__button">Читать далее</button>
 				</div>
 				<img src="./img/foto-cps.png" alt="Фото сервисного центра" class="about__img">
 			</section>
@@ -126,7 +131,6 @@
 								<img src="./img/apple.png" alt="Логотип Apple">
 							</a>
 						</li>
-				
 						<li class="swiper-slide brands__item">
 							<a href="#" class="brands__link">
 								<img src="./img/viewsonic.png" alt="Логотип ViewSonic">
@@ -170,7 +174,7 @@
 					</ul>
 					<div class="swiper-pagination"></div>
 				</div>
-				<button class="brands__button">Показать все</button>
+				<button class="button-unfold brands__button">Показать все</button>
 			</section>
 			<section class="services">
 				<h2 class="section-title">Ремонт различных видов техники</h2>
@@ -212,7 +216,7 @@
 					</ul>
 					<div class="swiper-pagination services__swiper-pagination"></div>
 				</div>
-				<button class="services__button">Показать все</button>
+				<button class="button-unfold services__button">Показать все</button>
 			</section>
 			<section class="price">
 				<h2 class="section-title">Цены на услуги</h2>
@@ -245,7 +249,7 @@
 									<div class="price__subtitle">Срок</div>
 									<div class="price__description">30 мин</div>
 								</div>
-								<button type="button" class="price__button">Заказать</button>
+								<button type="button" class="button-pink price__button">Заказать</button>
 							</div>
 						</div>
 						<div class="swiper-slide price__item">
@@ -262,7 +266,7 @@
 									<div class="price__subtitle">Срок</div>
 									<div class="price__description">30-120 мин</div>
 								</div>
-								<button type="button" class="price__button">Заказать</button>
+								<button type="button" class="button-pink price__button">Заказать</button>
 							</div>
 						</div>
 						<div class="swiper-slide price__item">
@@ -279,7 +283,7 @@
 									<div class="price__subtitle">Срок</div>
 									<div class="price__description">30-120 мин</div>
 								</div>
-								<button type="button"class="price__button">Заказать</button>
+								<button type="button"class="button-pink price__button">Заказать</button>
 							</div>
 						</div>
 						<div class="swiper-slide price__item">
@@ -296,7 +300,7 @@
 										<div class="price__subtitle">Срок</div>
 										<div class="price__description">30-120 мин</div>
 									</div>
-									<button type="button" class="price__button">Заказать</button>
+									<button type="button" class="button-pink price__button">Заказать</button>
 							</div>
 						</div>
 						<div class="swiper-slide price__item">
@@ -313,7 +317,7 @@
 									<div class="price__subtitle">Срок</div>
 									<div class="price__description">30-120 мин</div>
 								</div>
-								<button type="button" class="price__button">Заказать</button>
+								<button type="button" class="button-pink price__button">Заказать</button>
 							</div>
 						</div>
 					</div>

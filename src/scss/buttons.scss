@@ -1,0 +1,141 @@
+@import "./variables";
+
+.button {
+  width: 40px;
+  height: 40px;
+  background-color: $pink;
+  border:none;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  transition: opacity .3s;
+
+  &--call {
+    background-image: url('../img/icon-call.svg');
+    margin-right: 16px;
+  }
+  
+  &--chat {
+    background-image: url('../img/icon-chat.svg');
+    margin-right: 16px;
+  }
+  
+  &--profile {
+    background-image: url('../img/icon-profile.svg');
+  }
+  
+  &--repair {
+    background-image: url('../img/icon-repair.svg');
+    margin-right: 16px;
+  }
+  
+  &--status {
+    background-image: url('../img/icon-check.svg');
+  }
+
+  &--repair,
+  &--status {
+
+    @media(min-width: $desktop) {
+      border-radius: 0;
+      font-family: 'TTLakes-Medium';
+      width: 200px;
+      background-color: transparent;
+      background-position: right center;
+      font-size: 16px;
+      line-height: 24px;
+      padding-right: 40px;  
+    }
+  }
+
+  &--close {
+    background-image: url('../img/icon-close.svg');
+  }
+  
+  &--search {
+    background-image: url('../img/icon-search.svg');
+    margin-left: auto;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.button-unfold {
+  position: relative;
+  line-height: 24px;
+  color: $text;
+  font-size: 16px;
+  font-family: 'TTLakes-Medium';
+  border: none;
+  background-color: transparent;
+  padding-left: 16px;
+  cursor: pointer;
+
+  &.rotated::before {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 7px;
+    height: 10px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('../img/icon-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: transform 0.4s;
+  }
+}
+
+.button-pink {
+  position: relative;
+  display: flex;
+  width: 119px;
+  border-radius: 16px;
+  background-color:  $pink;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'TTLakes-Bold';
+  font-size: 12px;
+  line-height: 24px;
+  border: none;
+  padding: 4px 12px;
+  align-self: flex-end;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 10px;
+    background-image: url('../img/icon-arrow--right.svg');
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.buttons-left {
+  display: flex;
+  align-items: center;
+  display: none;
+
+  @media(min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.buttons-right {
+  display: flex;
+  align-items: center;
+}

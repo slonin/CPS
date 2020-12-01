@@ -156,37 +156,9 @@
 	}
 
 	&__button {
-		display: flex;
-		width: 119px;
-		border-radius: 16px;
-		background-color:  $pink;
-		text-transform: uppercase;
-		color: #fff;
-		font-family: 'TTLakes-Bold';
-		font-size: 12px;
-		line-height: 24px;
-		border: none;
-		padding: 4px 12px;
-		align-self: flex-end;
-		position: relative;
-		transition: opacity .3s;
-
-		&:hover {
-			opacity: .8;
-		}
-
-		&::after {
-			content: '';
-			position: absolute;
-			width: 7px;
-			height: 10px;
-			background-image: url('../img/icon-arrow--right.svg');
-			background-repeat: no-repeat;
-			top: 50%;
-			transform: translateY(-50%);
-			right: 16px;
-		}
-
+		
+		
+		
 		@media(min-width: 575px) {
 			align-self: center;
 		}

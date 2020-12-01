@@ -97,41 +97,16 @@
   }
 
   &__button {
-    position: relative;
-    display: none;
-    line-height: 24px;
-    color: $text;
-    font-size: 16px;
-    font-family: 'TTLakes-Medium';
-    border: none;
-    background-color: transparent;    
+  
     margin-left: 32px;
-    padding-left: 16px;
     margin-bottom: 32px;
 
     @media(min-width: 575px) {
       display: block;
     }
 
-    &::before {
-      position: absolute;
-      content: '';
-      width: 7px;
-      height: 10px;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-image: url('../img/icon-arrow.svg');
-      background-repeat: no-repeat;
-      background-position: center center;
-      transition: transform 0.4s;
-    }
   }
   
-  
-  &__button.rotated::before {
-    transform: rotate(180deg) translateY(50%);
-  }
 }
   
 .swiper-pagination-bullet {

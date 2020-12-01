@@ -1,28 +1,30 @@
 @import './variables';
 
 
-.blur {
-  display: none;
-  position: fixed;
+.menu-wrapper {
+  display: flex;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba($color: #fff, $alpha: 0.96);
-  z-index: 5;
+  position: absolute;
   transition: all 0.7s;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba($color: white, $alpha: 0.96);
+  transform: scaleX(0);
 
-  &--visible {
-    display: block;
+  &--opened {
+    transform: scaleX(1);   
   }
+
+  @media(min-width: $desktop) {
+    width: auto;
+    transform: scaleX(1);   
+    position: static;
+  }
+
 }
 
-
 .mobile-menu {
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: -400px;
   display: flex;
   flex-direction: column;
   width: 320px;
@@ -31,7 +33,6 @@
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
   overflow-y: auto;
   background-color: #fff;
-  transition: all .7s;
   z-index: 10;
 
   @media(min-width: $desktop) {
@@ -41,13 +42,6 @@
     box-shadow: none;
     height: auto;
     z-index: 1;
-  }
-
-  &--opened {
-    visibility: visible;
-    top:0;
-    left: 0;
-    z-index: 10;
   }
   
   &__header {
