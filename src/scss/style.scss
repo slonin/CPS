@@ -21,9 +21,14 @@
 body {
   min-width: 320px;
   background-color: #F8F8F8;
-  font-family: 'TTLakes-Regular';
+  font-family: 'TTLakes';
+  font-weight: 400;
   max-width: 1426px;
   margin: 0 auto;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 ul {

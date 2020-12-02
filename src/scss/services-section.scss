@@ -1,18 +1,21 @@
 @import "./variables";
 
 .services {
-
+  
   &__list {
-    box-sizing: border-box;
-    padding: 16px 16px 48px 16px;
+    width: auto;
+    margin: 0 0 16px 0;
+    padding: 16px;
+    list-style: none;
 
     @media(min-width: 575px) {
-      width: auto;
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
-      height: 190px;
-      padding: 24px 24px 15px 24px;
+      justify-content: space-between;
+      padding: 24px 24px 0 24px;
+      margin: 0;
+      margin-bottom: 24px;
+      overflow: hidden;
     }
 
     @media(min-width: $tablet) {
@@ -20,8 +23,7 @@
     }
 
     @media(min-width: 1120px) {
-      height: 200px;
-      padding: 32px 32px 12px 32px;
+      padding: 32px 32px 0px 32px;
     }
     
     @media(min-width: $desktop) {
@@ -29,13 +31,11 @@
     }
   }
 
-  &__list--unfolded {
-    height: 100%;
-  }
-
   &__item {
-    
+    min-height: 160px;
     width: 240px;
+    display: flex;
+    
 
     @media(min-width: 575px){
       margin-bottom: 16px;
@@ -71,12 +71,12 @@
 }
 
   &__link {
-    display: block;
+    width: 100%;
     background: #fff url('../img/icon-go.svg') no-repeat bottom 16px right 16px;
     padding: 16px;
-    height: 160px;
     color: $text;
-    font-family: 'TTLakes-Medium';
+    font-family: 'TTLakes';
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     border: 1px solid #EAEAEA;
@@ -86,7 +86,6 @@
   &__button { 
     display: none;
     margin-left: 32px;
-    margin-top: 20px;
     margin-bottom: 32px;
 
     @media(min-width: 575px) {

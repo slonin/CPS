@@ -39,7 +39,8 @@
 
     @media(min-width: $desktop) {
       border-radius: 0;
-      font-family: 'TTLakes-Medium';
+      font-family: 'TTLakes';
+      font-weight: 500;
       width: 200px;
       background-color: transparent;
       background-position: right center;
@@ -68,7 +69,8 @@
   line-height: 24px;
   color: $text;
   font-size: 16px;
-  font-family: 'TTLakes-Medium';
+  font-family: 'TTLakes';
+  font-weight: 500;
   border: none;
   background-color: transparent;
   padding-left: 16px;
@@ -101,7 +103,8 @@
   background-color:  $pink;
   text-transform: uppercase;
   color: #fff;
-  font-family: 'TTLakes-Bold';
+  font-family: 'TTLakes';
+  font-weight: 700;
   font-size: 12px;
   line-height: 24px;
   border: none;
@@ -138,4 +141,18 @@
 .buttons-right {
   display: flex;
   align-items: center;
+  margin-left: 42px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+    width: 2px;
+    height: 32px;
+    background: #EAEAEA;
+    border-radius: 1px;
+  }
 }

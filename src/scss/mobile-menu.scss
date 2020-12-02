@@ -11,12 +11,15 @@
   z-index: 10;
   background-color: rgba($color: white, $alpha: 0.96);
   transform: scaleX(0);
+  visibility: hidden;
 
   &--opened {
+    visibility: visible;
     transform: scaleX(1);   
   }
 
   @media(min-width: $desktop) {
+    visibility: visible;
     width: auto;
     transform: scaleX(1);   
     position: static;
@@ -83,7 +86,8 @@
   &__link {
     text-decoration: none;
     color: $text;
-    font-family: 'TTLakes-Medium';
+    font-family: 'TTLakes';
+    font-weight: 500;
   }
   
   &__link--active {
@@ -108,7 +112,8 @@
 .contacts {
 
   &__mail {
-    font-family: 'TTLakes-Medium';
+    font-family: 'TTLakes';
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     text-decoration: none;
@@ -123,7 +128,8 @@
     line-height: 32px;
     color: $text;
     display: block;
-    font-family: 'TTLakes-Bold';
+    font-family: 'TTLakes';
+    font-weight: 700;
     margin-bottom: 40px;
   }
 }
@@ -131,7 +137,8 @@
 .language {
 
   &__button {
-    font-family: 'TTLakes-Medium';
+    font-family: 'TTLakes';
+    font-weight: 500;
     border: none;
     cursor: pointer;
     background-color: transparent;

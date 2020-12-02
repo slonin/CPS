@@ -126,7 +126,8 @@
 	}
 
 	&__subtitle {
-		font-family: 'TTLakes-Medium';
+		font-family: 'TTLakes';
+		font-weight: 500;
 		line-height: 16px;
 		color: #7E7E82;
 		opacity: 0.72;
@@ -188,7 +189,8 @@
 
 	&__link {
 		display: inline-block;
-		font-family: 'TTLakes-Medium';
+		font-family: 'TTLakes';
+		font-weight: 500;
 		letter-spacing: -0.2px;
 		color: $text;
 		line-height: 24px;

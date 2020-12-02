@@ -21,7 +21,8 @@
   &__title {
     position: relative;
     font-size: 28px;
-    font-family: 'TTLakes-Bold';
+    font-family: 'TTLakes';
+    font-weight: 700;
     line-height: 40px;
     color: $text;
     margin: 0;
@@ -67,6 +68,7 @@
     margin-bottom: 24px;
 
     @media(min-width: $desktop) {
+      justify-content: flex-start;
       flex-wrap: wrap;
     }
   }
@@ -76,14 +78,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  &__item:not(:last-child) {
-    margin-right: 20px;
-
-    @media(min-width: 1120px) {
-      margin: 0;
-    }
   }
   
   &__link {
@@ -107,6 +101,11 @@
 
   @media(min-width:575px) {
     flex-direction: row;
+  }
+
+  &__title {
+    position: absolute;
+    font-size: 0;
   }
 
   &__text {
