@@ -58,6 +58,10 @@
   }
 
   &__logo {
-    margin-left: 42px;
+    margin-left: 16px;
+
+    @media(min-width: $tablet) {
+      margin-left: 42px; 
+    }
   }
 }
